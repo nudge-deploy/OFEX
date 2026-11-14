@@ -1,0 +1,2 @@
+
+PERBAIKI: kutipan `quote` berikut tidak ditemukan persis di blok <ayat> (mungkin memakai elipsis, melompati kata, menyambung kalimat induk dengan butir, atau mengubah kata): {{bad}}. Kembalikan ulang SELURUH jawaban dengan setiap `quote` berupa satu potongan bersambung yang disalin persis dari <ayat>.

@@ -1,0 +1,27 @@
+{
+ "run": "test3",
+ "set": "test",
+ "prompt_version": "v4.1",
+ "model": "openai/gpt-4o-mini",
+ "temperature": 0.0,
+ "provisions": 240,
+ "calls": 373,
+ "failed_calls": 0,
+ "repair_calls": 4,
+ "tokens_in": 927542,
+ "tokens_out": 58704,
+ "cost_usd": 0.1744,
+ "runtime_seconds": 148.4,
+ "models_returned": [
+  "openai/gpt-4o-mini"
+ ],
+ "prompt_sha256": {
+  "system.txt": "d18f2bbc24ca6dbcbf37b85e61df38798b5441935a9292171e517bed80356074",
+  "atomic_rules.txt": "ac2bdd663485491d08bd2d6bdbcfb4d684983f1bd619382f8e16ca42c1da6146",
+  "b_step1.txt": "28f3e030ff31d71a5a5c56846a073bd4f83c89c523bb81dfc77b86e9f458f2f6",
+  "b_step1_repair.txt": "d4831e54a2dd1fa0e63f8c19f73422f64048f2fe2596474e250cbdfc4adbaba7",
+  "b_step2.txt": "fede9920310256f689c914b984931e889a7512d4adf8e9ac144309912211739a",
+  "schemas.json": "62a7fed5bf08c55a5cb9222d7dcd6fe4e4880da9f11c3ed4644ede8bac147e87"
+ },
+ "started": "2026-11-14T12:28:23+0700"
+}

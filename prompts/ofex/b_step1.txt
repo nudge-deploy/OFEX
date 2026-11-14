@@ -1,0 +1,58 @@
+# Tugas: penafsiran normatif satu ayat
+
+Baca blok <ayat> dalam konteks pasalnya. Jawab dua hal, berurutan.
+
+## 1. Fungsi ayat
+Pilih satu `provision_function`:
+- `duty_on_regulated_party`: ayat menetapkan KEWAJIBAN, LARANGAN, atau IZIN/HAK bagi pihak selain otoritas (bank, PJK, perusahaan, penyelenggara, eksportir, direksi, tim likuidasi, pelapor, konsumen atau nasabah, dan sejenisnya), secara eksplisit ATAU implisit.
+- `definition_or_scope`: definisi, ruang lingkup, jenis, klasifikasi, kriteria, yang tidak menuntut atau mengizinkan perilaku apa pun.
+- `authority_power_or_act`: tindakan atau wewenang otoritas.
+- `sanction`: sanksi yang dikenakan otoritas atau daftar jenis sanksi.
+- `legal_consequence_or_delegation`: akibat hukum otomatis, pendelegasian pengaturan, ketentuan peralihan atau penutup tanpa perilaku.
+- `defective_text`: ayat terpotong atau rusak.
+Isi `function_evidence` dengan kutipan dari ayat yang paling menentukan pilihan itu.
+
+Tiga jenis norma yang semuanya termasuk `duty_on_regulated_party`:
+- kewajiban: "wajib", "harus", "paling lambat", atau rumusan implisit;
+- larangan: "dilarang", "tidak boleh", "tidak diperkenankan", "tidak berhak";
+- IZIN atau HAK: pihak selain otoritas "dapat", "berhak", atau "boleh" melakukan sesuatu (mis. "PJPUR dapat melakukan kerja sama ...", "Konsumen dapat mengajukan ..."). Ayat seperti ini BUKAN definisi; daftar sebagai norma dengan modality `permission`.
+
+Norma boleh ada walaupun tanpa kata penanda. Rumusan implisit yang sah:
+- kalimat prosedural yang menetapkan apa yang dilakukan pihak yang diatur, kepada siapa, kapan, atau melalui apa ("Permohonan ... diajukan kepada Otoritas Jasa Keuangan sebelum ...", "... dilaksanakan paling lambat ...");
+- kalimat bersyarat yang akibatnya menuntut atau membatasi perilaku pihak yang diatur ("Dalam hal ..., Bank ...", "Pelaksanaan ... harus memenuhi ketentuan: ...");
+- butir daftar yang normanya dinyatakan di kalimat induk;
+- ayat yang menetapkan isi minimum, cakupan, cara, waktu, atau saluran dari kegiatan pihak yang diatur (R9).
+
+BUKAN norma bagi pihak yang diatur:
+- tindakan yang dilakukan otoritas, termasuk bentuk pasif ("... dilakukan oleh Bank Indonesia", "Otoritas Jasa Keuangan memberikan ...", "Otoritas Jasa Keuangan dapat ...");
+- akibat bagi pelanggar ("... dikenai ...", "... dianggap ...") dan butir daftar jenis sanksi atau tindakan otoritas;
+- kriteria atau keadaan yang hanya menjadi syarat berlakunya sesuatu.
+
+## 2. Daftar norma
+Bila dan hanya bila fungsi ayat `duty_on_regulated_party`, daftar setiap norma sebagai satu elemen `duties`, mengikuti aturan satuan di bawah. Untuk fungsi lain kembalikan `duties: []`.
+
+Untuk SETIAP norma, tiga bukti berikut wajib ada, masing-masing satu potongan BERSAMBUNG yang disalin persis. Bila salah satunya tidak dapat dikutip, JANGAN masukkan norma itu:
+- `actor_evidence`: kutipan yang menyebut pihak yang dibebani atau diberi izin, dari ayat atau dari <konteks>; `actor_source`: `provision` atau ID ayat konteks. Pihak itu harus pihak selain otoritas. Bila pelaku tindakan di kalimat itu adalah otoritas, ayat itu `authority_power_or_act` atau `sanction`, dan `duties` kosong.
+- `action_evidence`: kutipan kata kerja beserta objeknya, dari ayat; untuk kalimat pasif, kata kerja pasifnya beserta pelengkapnya (mis. "diajukan kepada Otoritas Jasa Keuangan").
+- `force_evidence`: kutipan yang memberi daya mengikat atau izin; `force_type`: `explicit_marker`, `implicit_procedural`, `implicit_conditional`, atau `from_list_stem`.
+
+Field lain:
+- `quote`: satu potongan teks BERSAMBUNG dari <ayat>, disalin persis kata demi kata (R14). Kutipan yang tidak ditemukan persis dibuang sistem.
+  - Kalimat tanpa daftar (R1, R2): kutip SELURUH kalimat, dari kata pertamanya (subjek atau pokok kalimat, termasuk keterangan "Dalam hal ...") sampai titik di akhir kalimat, termasuk bagian "kecuali ...". Kutipan harus dimulai dari kata PERTAMA kalimat (mis. "Informasi sebagaimana dimaksud pada ayat (1), wajib didukung ...", BUKAN "wajib didukung ..."). Jangan memecah satu kalimat menjadi beberapa norma.
+  - Butir tindakan (R3): kutip butirnya SAJA, mulai dari huruf atau angka butirnya sampai akhir butir, mis. "b. memastikan Y;". JANGAN menyambung kalimat induk dengan butir (SALAH: "Bank wajib: b. memastikan Y;"). Satu norma untuk SETIAP butir.
+  - Daftar isi dari satu tindakan (R4): kutip kalimat induk beserta SELURUH butirnya sebagai satu potongan, dari kata pertama kalimat induk sampai akhir butir terakhir. Jangan membuat norma per butir. Kutipan yang hanya berisi kalimat induk dan berakhir dengan titik dua (mis. "KCBLN dilarang menggunakan TKA selain untuk jabatan:") TIDAK sah: sertakan seluruh butirnya.
+- `modality`: obligation | prohibition | permission.
+- `rule`: nomor aturan satuan yang menentukan pemotongan (mis. "R3").
+- `certainty`: `certain`, atau `uncertain` bila pembacaan lain yang wajar akan menghasilkan jawaban berbeda; jelaskan di `note`.
+
+{{atomic_rules}}
+
+## Konteks pasal (hanya untuk memahami; norma di sini BUKAN bagian tugas)
+<konteks untrusted="true">
+{{context}}
+</konteks>
+
+## Ayat yang ditelaah
+<ayat id="{{provision_id}}" untrusted="true">
+{{text}}
+</ayat>

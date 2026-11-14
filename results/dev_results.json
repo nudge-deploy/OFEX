@@ -1,0 +1,383 @@
+{
+ "set": "dev",
+ "provisions": 300,
+ "reference_obligations": 233,
+ "reference_by_modality": {
+  "obligation": 178,
+  "permission": 23,
+  "prohibition": 32
+ },
+ "provisions_without_reference": 135,
+ "reference_status": "AI-generated (two model annotators + model adjudicator); not expert-validated",
+ "main": {
+  "all_records (primary)": {
+   "runs": 1,
+   "predictions": 222.0,
+   "TP": 187.0,
+   "FP": 35.0,
+   "FN": 46.0,
+   "precision": {
+    "value": 0.8423,
+    "ci": [
+     0.7586,
+     0.9122
+    ]
+   },
+   "recall": {
+    "value": 0.8026,
+    "ci": [
+     0.738,
+     0.8597
+    ]
+   },
+   "f1": {
+    "value": 0.822,
+    "ci": [
+     0.7612,
+     0.8753
+    ]
+   }
+  },
+  "accept_only": {
+   "runs": 1,
+   "predictions": 204.0,
+   "TP": 171.0,
+   "FP": 33.0,
+   "FN": 62.0,
+   "precision": {
+    "value": 0.8382,
+    "ci": [
+     0.7486,
+     0.9163
+    ]
+   },
+   "recall": {
+    "value": 0.7339,
+    "ci": [
+     0.6571,
+     0.8008
+    ]
+   },
+   "f1": {
+    "value": 0.7826,
+    "ci": [
+     0.7143,
+     0.8406
+    ]
+   }
+  },
+  "keyword baseline": {
+   "runs": 1,
+   "predictions": 245.0,
+   "TP": 140.0,
+   "FP": 105.0,
+   "FN": 93.0,
+   "precision": {
+    "value": 0.5714,
+    "ci": [
+     0.4832,
+     0.6604
+    ]
+   },
+   "recall": {
+    "value": 0.6009,
+    "ci": [
+     0.5122,
+     0.6849
+    ]
+   },
+   "f1": {
+    "value": 0.5858,
+    "ci": [
+     0.5098,
+     0.6581
+    ]
+   }
+  }
+ },
+ "per_run": [
+  {
+   "run": "dev",
+   "precision": 0.8423,
+   "recall": 0.8026,
+   "f1": 0.822,
+   "TP": 187,
+   "FP": 35,
+   "FN": 46
+  }
+ ],
+ "source_grounding": 1.0,
+ "identical_spans_across_runs": null,
+ "vs_keyword_baseline": {
+  "precision": {
+   "diff": 0.2709137709137709,
+   "ci_lo": 0.1756878696837467,
+   "ci_hi": 0.370562638024493
+  },
+  "recall": {
+   "diff": 0.20171673819742486,
+   "ci_lo": 0.10698056212240616,
+   "ci_hi": 0.30241935483870963
+  },
+  "f1": {
+   "diff": 0.2362039634006161,
+   "ci_lo": 0.15602993034627657,
+   "ci_hi": 0.3211607663446267
+  },
+  "mcnemar": {
+   "gained": 60,
+   "lost": 13,
+   "p": 2.3070738505242644e-08
+  }
+ },
+ "annotator_agreement": {
+  "A_vs_B": {
+   "precision": 0.7092,
+   "recall": 0.7706,
+   "f1": 0.7386
+  },
+  "A_vs_reference": {
+   "precision": 0.8312,
+   "recall": 0.824,
+   "f1": 0.8276
+  },
+  "B_vs_reference": {
+   "precision": 0.8406,
+   "recall": 0.9056,
+   "f1": 0.8719
+  },
+  "presence_kappa": 0.785,
+  "adjudicated_provisions": null
+ },
+ "breakdown": {
+  "annotators agree": {
+   "provisions": 227,
+   "reference": 147,
+   "predictions": 145.0,
+   "TP": 125.0,
+   "precision": 0.8621,
+   "recall": 0.8503,
+   "f1": 0.8562
+  },
+  "annotators disagree": {
+   "provisions": 73,
+   "reference": 86,
+   "predictions": 77.0,
+   "TP": 62.0,
+   "precision": 0.8052,
+   "recall": 0.7209,
+   "f1": 0.7607
+  },
+  "marker: obligation": {
+   "provisions": 97,
+   "reference": 115,
+   "predictions": 104.0,
+   "TP": 99.0,
+   "precision": 0.9519,
+   "recall": 0.8609,
+   "f1": 0.9041
+  },
+  "marker: prohibition": {
+   "provisions": 13,
+   "reference": 31,
+   "predictions": 39.0,
+   "TP": 29.0,
+   "precision": 0.7436,
+   "recall": 0.9355,
+   "f1": 0.8286
+  },
+  "marker: permission": {
+   "provisions": 52,
+   "reference": 27,
+   "predictions": 20.0,
+   "TP": 18.0,
+   "precision": 0.9,
+   "recall": 0.6667,
+   "f1": 0.766
+  },
+  "marker: other": {
+   "provisions": 138,
+   "reference": 60,
+   "predictions": 59.0,
+   "TP": 41.0,
+   "precision": 0.6949,
+   "recall": 0.6833,
+   "f1": 0.6891
+  },
+  "regulation: PBI-3-2026": {
+   "provisions": 35,
+   "reference": 19,
+   "predictions": 20.0,
+   "TP": 17.0,
+   "precision": 0.85,
+   "recall": 0.8947,
+   "f1": 0.8718
+  },
+  "regulation: PBI-5-2026": {
+   "provisions": 13,
+   "reference": 10,
+   "predictions": 10.0,
+   "TP": 5.0,
+   "precision": 0.5,
+   "recall": 0.5,
+   "f1": 0.5
+  },
+  "regulation: PBI-6-2026": {
+   "provisions": 33,
+   "reference": 42,
+   "predictions": 47.0,
+   "TP": 38.0,
+   "precision": 0.8085,
+   "recall": 0.9048,
+   "f1": 0.8539
+  },
+  "regulation: POJK-1-2026": {
+   "provisions": 18,
+   "reference": 14,
+   "predictions": 10.0,
+   "TP": 9.0,
+   "precision": 0.9,
+   "recall": 0.6429,
+   "f1": 0.75
+  },
+  "regulation: POJK-39-2024": {
+   "provisions": 116,
+   "reference": 68,
+   "predictions": 62.0,
+   "TP": 55.0,
+   "precision": 0.8871,
+   "recall": 0.8088,
+   "f1": 0.8462
+  },
+  "regulation: POJK-6-2026": {
+   "provisions": 9,
+   "reference": 11,
+   "predictions": 10.0,
+   "TP": 10.0,
+   "precision": 1.0,
+   "recall": 0.9091,
+   "f1": 0.9524
+  },
+  "regulation: POJK-7-2026": {
+   "provisions": 11,
+   "reference": 7,
+   "predictions": 6.0,
+   "TP": 6.0,
+   "precision": 1.0,
+   "recall": 0.8571,
+   "f1": 0.9231
+  },
+  "regulation: POJK-8-2023": {
+   "provisions": 39,
+   "reference": 49,
+   "predictions": 39.0,
+   "TP": 37.0,
+   "precision": 0.9487,
+   "recall": 0.7551,
+   "f1": 0.8409
+  },
+  "regulation: POJK-8-2026": {
+   "provisions": 17,
+   "reference": 9,
+   "predictions": 15.0,
+   "TP": 7.0,
+   "precision": 0.4667,
+   "recall": 0.7778,
+   "f1": 0.5833
+  },
+  "regulation: POJK-9-2026": {
+   "provisions": 9,
+   "reference": 4,
+   "predictions": 3.0,
+   "TP": 3.0,
+   "precision": 1.0,
+   "recall": 0.75,
+   "f1": 0.8571
+  }
+ },
+ "recall_by_modality": {
+  "obligation": 0.7978,
+  "permission": 0.7391,
+  "prohibition": 0.875
+ },
+ "fields": {
+  "actor": {
+   "exact": 0.9144,
+   "positive_case_exact": 0.9551,
+   "positive_n_per_run": 178.0
+  },
+  "modality": {
+   "exact": 1.0,
+   "positive_case_exact": 1.0,
+   "positive_n_per_run": 187.0
+  },
+  "action": {
+   "exact": 0.7059,
+   "positive_case_exact": 0.7059,
+   "positive_n_per_run": 187.0
+  },
+  "object": {
+   "exact": 0.3155,
+   "positive_case_exact": 0.3189,
+   "positive_n_per_run": 185.0
+  },
+  "condition": {
+   "exact": 0.508,
+   "positive_case_exact": 0.3258,
+   "positive_n_per_run": 89.0
+  },
+  "threshold": {
+   "exact": 0.8556,
+   "positive_case_exact": 0.0909,
+   "positive_n_per_run": 11.0
+  },
+  "timing": {
+   "exact": 0.7914,
+   "positive_case_exact": 0.2292,
+   "positive_n_per_run": 48.0
+  },
+  "exception": {
+   "exact": 0.9626,
+   "positive_case_exact": 0.25,
+   "positive_n_per_run": 8.0
+  },
+  "evidence": {
+   "exact": 0.1444,
+   "positive_case_exact": 0.2386,
+   "positive_n_per_run": 88.0
+  }
+ },
+ "error_taxonomy": {
+  "FN: lost_in_one_to_one_matching": 4.0,
+  "FN: not_extracted": 30.0,
+  "FN: span_too_short_or_too_long": 10.0,
+  "FN: split_into_several_predictions": 2.0,
+  "FP: fragment_of_matched_reference": 1.0,
+  "FP: fragment_of_unmatched_reference": 10.0,
+  "FP: merges_several_reference_obligations": 1.0,
+  "FP: no_reference_obligation_in_provision": 12.0,
+  "FP: partial_overlap_with_unmatched_reference": 2.0,
+  "FP: span_outside_all_reference_obligations": 9.0
+ },
+ "funnel_mean_per_run": {
+  "1 provision function: authority_power_or_act": 69.0,
+  "1 provision function: defective_text": 15.0,
+  "1 provision function: definition_or_scope": 32.0,
+  "1 provision function: duty_on_regulated_party": 151.0,
+  "1 provision function: legal_consequence_or_delegation": 8.0,
+  "1 provision function: sanction": 25.0,
+  "2 norms listed": 230.0,
+  "3 quotation aligned: exact": 194.0,
+  "3 quotation aligned: list_item_part": 25.0,
+  "3 quotation aligned: page_furniture_tolerant": 6.0,
+  "3 quotation rejected": 5.0,
+  "4 ACCEPT": 207.0,
+  "4 UNCERTAIN": 18.0,
+  "5 removed by deduplication": 3.0,
+  "6 final records": 222.0,
+  "calls": 455.0,
+  "cost_usd": 0.2112,
+  "tokens_in": 1130327.0,
+  "tokens_out": 69491.0
+ }
+}

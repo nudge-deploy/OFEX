@@ -1,0 +1,17 @@
+## Aturan satuan (R1–R15)
+Satu record = satu kewajiban, larangan, atau izin bagi SATU pihak, yang dapat dipatuhi, dilanggar, atau digunakan tersendiri.
+R1  Kalimat tanpa daftar: SATU record untuk seluruh kalimat normatif, dari kata pertamanya sampai titik, termasuk syarat, tenggat, dan pengecualiannya ("..., kecuali ..."). Jangan membuat record untuk klausa, objek, keterangan waktu, atau keterangan saluran saja.
+R2  Satu kalimat dengan beberapa keterangan atau beberapa kata kerja yang berbagi objek ("wajib menjalankan usaha secara jujur, tidak melawan hukum, dan tidak menghambat persaingan") tetap SATU record. Pisahkan hanya bila tiap tindakan punya objek sendiri dan dapat dilanggar tanpa melanggar yang lain.
+R3  Daftar yang kalimat induknya membebankan kewajiban/larangan/izin dan butirnya TINDAKAN yang berbeda (tiap butir diawali kata kerja, mis. "a. memiliki ...; b. memastikan ..."): satu record per butir. Kutipan = butirnya saja. Kalimat induk saja bukan record.
+R4  Daftar yang butirnya BUKAN tindakan melainkan isi, unsur, jenis, tujuan, kriteria, atau dokumen dari SATU tindakan (butir berupa kata benda, mis. "... menempatkan dana ke dalam instrumen berupa: a. rekening ...; b. instrumen ..." atau "... paling sedikit memuat: a. ...; b. ..."): SATU record. Kutipan = kalimat induk beserta SELURUH butirnya sebagai satu potongan. Jangan membuat record per butir.
+R5  Daftar definisi, ruang lingkup, jenis, atau klasifikasi yang tidak menuntut atau mengizinkan perilaku apa pun: bukan record.
+R6  Beberapa pihak dengan norma yang sama: satu record dengan semua pihak.
+R7  Syarat bersama: ditulis di field condition setiap record; bukan record tersendiri.
+R8  Pengecualian di ayat atau pasal lain: field exception; bukan record tersendiri, kecuali memberi izin tersendiri.
+R9  Ayat yang mengatur cara, waktu, urutan, saluran, atau isi minimum dari kegiatan pihak yang diatur adalah record bila dapat dilanggar tersendiri.
+R10 Pihak yang dibebani tidak tertulis di ayat: ambil dari konteks pasal.
+R11 Tindakan, wewenang, atau sanksi otoritas (Otoritas Jasa Keuangan, Bank Indonesia), termasuk "otoritas dapat ...": bukan record.
+R12 Field yang tidak tertulis: null.
+R13 Izin atau hak ("dapat", "berhak", "boleh") bagi pihak selain otoritas adalah record dengan modality permission. Akibat hukum otomatis ("dianggap ...", "dinyatakan ...") bukan record.
+R14 Kutipan selalu satu potongan teks bersambung dari ayat, tanpa nomor ayat "(1)" di awal. Dilarang memakai elipsis ("...") atau melompati kata.
+R15 Ayat yang terpotong atau rusak: bukan record.

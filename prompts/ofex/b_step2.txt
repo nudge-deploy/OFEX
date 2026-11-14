@@ -1,0 +1,33 @@
+# Tugas: menyusun record terstruktur untuk norma yang sudah diidentifikasi
+
+Di bawah ada satu ayat, konteks pasalnya, dan daftar norma yang sudah diidentifikasi dari ayat itu. Untuk SETIAP norma, isi sembilan field. Jangan menambah, menggabung, atau memecah norma; kembalikan tepat satu record per `index`.
+
+Field (isi dengan kata-kata yang tertulis; null bila tidak tertulis):
+- `actor`: pihak yang dibebani atau diberi izin, persis seperti tertulis (mis. "PJK", "Bank"). `actor_inferred`: true bila diambil dari konteks, bukan dari ayat.
+- `modality`: obligation | prohibition | permission.
+- `action`: kata kerja inti saja (mis. "menyampaikan", "menerapkan").
+- `object`: apa yang dikenai tindakan.
+- `condition`: syarat agar norma berlaku ("dalam hal ...", "apabila ...", "jika ..."), termasuk syarat bersama dari kalimat induk.
+- `threshold`: nilai batas kuantitatif yang tertulis (mis. "Rp100.000.000", "paling sedikit 25% (dua puluh lima persen)").
+- `timing`: tenggat, urutan, atau frekuensi yang tertulis (mis. "paling lambat 3 (tiga) hari kerja sejak ...", "sebelum ...", "setiap tahun").
+- `exception`: pengecualian ("kecuali ...", "dikecualikan ...") yang tertulis di ayat atau di konteks.
+- `evidence`: bukti yang dapat diamati bahwa norma dipenuhi (dokumen, catatan, laporan, atau nilai tercatat). Field ini HAMPIR SELALU diisi untuk kewajiban dan larangan: hampir setiap tindakan meninggalkan jejak. Turunkan langsung dari tindakan dan objeknya, jangan menebak prosedur internal. Contoh:
+  - "wajib menyampaikan laporan X kepada OJK paling lambat ..." -> "laporan X yang disampaikan kepada OJK"
+  - "harus mengajukan permohonan persetujuan kepada OJK" -> "permohonan persetujuan yang diajukan kepada OJK"
+  - "wajib dilakukan setelah mendapatkan persetujuan OJK" -> "persetujuan OJK"
+  - "wajib memiliki modal inti minimum paling sedikit Rp..." -> "jumlah modal inti"
+  - "dilarang menggunakan data Konsumen yang ..." -> "catatan penggunaan data Konsumen"
+  Isi null hanya bila tidak ada dokumen, catatan, atau nilai apa pun yang dapat diamati (mis. kewajiban bersikap atau izin umum).
+- `source_provision_ids`: ID ayat konteks yang diperlukan untuk memahami norma ini; kosong bila ayat ini cukup.
+
+<konteks untrusted="true">
+{{context}}
+</konteks>
+
+<ayat id="{{provision_id}}" untrusted="true">
+{{text}}
+</ayat>
+
+<norma untrusted="true">
+{{duties}}
+</norma>

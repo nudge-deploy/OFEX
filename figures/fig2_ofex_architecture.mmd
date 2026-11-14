@@ -1,0 +1,10 @@
+flowchart TD
+    IN["Input<br/>provision + other provisions of the same article (≤ 6,000 chars)<br/>+ cited articles in the corpus (≤ 2,000 chars)"]
+    IN --> S1["Step 1 · Normative interpretation (LLM call 1)<br/>(a) provision function: one of six classes<br/>(b) norm list: quotation + actor, action, force evidence + segmentation rule R1–R15"]
+    S1 --> D1{"duty on a<br/>regulated party?"}
+    D1 -- "no: definition, authority power, sanction,<br/>legal consequence, defective text" --> NO["Logged, no record"]
+    D1 -- "yes" --> S2["Step 2 · Quotation alignment (code)<br/>exact → page-furniture tolerant → list-item part<br/>fail → one repair call (LLM) → still fail: rejected"]
+    S2 --> S3["Step 3 · Three-evidence check (code)<br/>actor, action, force evidence found and certain → ACCEPT<br/>otherwise UNCERTAIN (kept, flagged)"]
+    S3 --> S4["Step 4 · Structuring (LLM call 2)<br/>nine fields per listed norm; no adding, merging, or splitting"]
+    S4 --> S5["Step 5 · Normalisation and deduplication (code)<br/>null-like → empty; identical spans merged;<br/>span ≥ 90% inside a longer one removed"]
+    S5 --> OUT["Output<br/>obligation records: source text and offsets, modality, nine fields,<br/>evidence quotations, ACCEPT/UNCERTAIN flag, trace"]

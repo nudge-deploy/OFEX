@@ -1,0 +1,25 @@
+{
+ "b_step1": {"type": "object", "additionalProperties": false, "required": ["provision_function", "function_evidence", "duties"], "properties": {
+   "provision_function": {"type": "string", "enum": ["duty_on_regulated_party", "definition_or_scope", "authority_power_or_act", "sanction", "legal_consequence_or_delegation", "defective_text"]},
+   "function_evidence": {"type": ["string", "null"]},
+   "duties": {"type": "array", "items": {"type": "object", "additionalProperties": false,
+     "required": ["quote", "modality", "actor_evidence", "actor_source", "action_evidence", "force_evidence", "force_type", "rule", "certainty", "note"],
+     "properties": {"quote": {"type": "string"}, "modality": {"type": "string", "enum": ["obligation", "prohibition", "permission"]},
+       "actor_evidence": {"type": "string"}, "actor_source": {"type": "string"}, "action_evidence": {"type": "string"}, "force_evidence": {"type": "string"},
+       "force_type": {"type": "string", "enum": ["explicit_marker", "implicit_procedural", "implicit_conditional", "from_list_stem"]},
+       "rule": {"type": "string"}, "certainty": {"type": "string", "enum": ["certain", "uncertain"]}, "note": {"type": ["string", "null"]}}}}}},
+ "b_step2": {"type": "object", "additionalProperties": false, "required": ["records"], "properties": {"records": {"type": "array", "items": {"type": "object", "additionalProperties": false,
+   "required": ["index", "actor", "actor_inferred", "modality", "action", "object", "condition", "threshold", "timing", "exception", "evidence", "source_provision_ids"],
+   "properties": {"index": {"type": "integer"}, "actor": {"type": ["string", "null"]}, "actor_inferred": {"type": "boolean"}, "modality": {"type": "string", "enum": ["obligation", "prohibition", "permission"]},
+     "action": {"type": ["string", "null"]}, "object": {"type": ["string", "null"]}, "condition": {"type": ["string", "null"]}, "threshold": {"type": ["string", "null"]}, "timing": {"type": ["string", "null"]},
+     "exception": {"type": ["string", "null"]}, "evidence": {"type": ["string", "null"]}, "source_provision_ids": {"type": "array", "items": {"type": "string"}}}}}}},
+ "c_verifier": {"type": "object", "additionalProperties": false, "required": ["provision_function", "function_evidence", "decisions"], "properties": {
+   "provision_function": {"type": "string", "enum": ["duty_on_regulated_party", "definition_or_scope", "authority_power_or_act", "sanction", "legal_consequence_or_delegation", "defective_text"]},
+   "function_evidence": {"type": ["string", "null"]},
+   "decisions": {"type": "array", "items": {"type": "object", "additionalProperties": false,
+     "required": ["index", "actor_evidence", "action_evidence", "force_evidence", "decision", "reject_type", "duplicate_of", "reason"],
+     "properties": {"index": {"type": "integer"}, "actor_evidence": {"type": ["string", "null"]}, "action_evidence": {"type": ["string", "null"]}, "force_evidence": {"type": ["string", "null"]},
+       "decision": {"type": "string", "enum": ["ACCEPT", "REJECT", "UNCERTAIN"]},
+       "reject_type": {"type": ["string", "null"], "enum": ["definition_or_scope", "enumeration_of_things", "authority_power_or_act", "sanction", "legal_consequence_or_delegation", "fragment", "duplicate", "defective_text", "other", null]},
+       "duplicate_of": {"type": ["integer", "null"]}, "reason": {"type": "string"}}}}}}
+}

@@ -1,0 +1,146 @@
+{
+ "name": "Ann",
+ "schema": {
+  "$defs": {
+   "Obl": {
+    "properties": {
+     "quote": {
+      "type": "string"
+     },
+     "actor": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     },
+     "modality": {
+      "enum": [
+       "obligation",
+       "prohibition",
+       "permission"
+      ],
+      "type": "string"
+     },
+     "action": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     },
+     "object": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     },
+     "condition": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     },
+     "threshold": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     },
+     "timing": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     },
+     "exception": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     },
+     "evidence": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     },
+     "treatment_class": {
+      "enum": [
+       "informational",
+       "interpretive",
+       "assessable",
+       "executable"
+      ],
+      "type": "string"
+     },
+     "source_provision_ids": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array"
+     }
+    },
+    "required": [
+     "quote",
+     "actor",
+     "modality",
+     "action",
+     "object",
+     "condition",
+     "threshold",
+     "timing",
+     "exception",
+     "evidence",
+     "treatment_class",
+     "source_provision_ids"
+    ],
+    "type": "object",
+    "additionalProperties": false
+   }
+  },
+  "properties": {
+   "obligations": {
+    "items": {
+     "$ref": "#/$defs/Obl"
+    },
+    "type": "array"
+   }
+  },
+  "required": [
+   "obligations"
+  ],
+  "type": "object",
+  "additionalProperties": false
+ }
+}

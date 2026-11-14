@@ -1,0 +1,27 @@
+{
+ "corpus_provisions": 2243,
+ "regulations": 10,
+ "articles": 744,
+ "dev_reproduced": true,
+ "test_reproduced": true,
+ "overlap_dev_test": 0,
+ "unused_provisions": 1703,
+ "categories_corpus": {
+  "permission": 368,
+  "other": 1089,
+  "obligation": 735,
+  "prohibition": 51
+ },
+ "test_by_regulation": {
+  "PBI-3-2026": 28,
+  "PBI-5-2026": 11,
+  "PBI-6-2026": 26,
+  "POJK-1-2026": 14,
+  "POJK-39-2024": 92,
+  "POJK-6-2026": 7,
+  "POJK-7-2026": 10,
+  "POJK-8-2023": 31,
+  "POJK-8-2026": 12,
+  "POJK-9-2026": 9
+ }
+}

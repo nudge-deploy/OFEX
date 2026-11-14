@@ -1,0 +1,48 @@
+1. TUGAS
+   Baca satu ayat. Tandai setiap obligation di dalamnya. Ayat boleh tidak memuat
+   obligation sama sekali; dalam hal itu centang "Ayat ini tidak memuat obligation".
+   Kerjakan sendiri. Jangan berdiskusi dengan anotator lain dan jangan memakai
+   alat AI. Anda tidak akan melihat keluaran model.
+
+2. APA ITU OBLIGATION
+   Pernyataan normatif yang menetapkan perilaku bagi pihak yang diatur, berbentuk:
+   - obligation  : wajib melakukan sesuatu ("wajib", "harus", "paling lambat ...")
+   - prohibition : dilarang melakukan sesuatu ("dilarang", "tidak boleh")
+   - permission  : boleh melakukan sesuatu ("dapat", "berhak")
+   BUKAN obligation: definisi, ruang lingkup, pernyataan mulai berlaku, wewenang
+   OJK/BI terhadap dirinya sendiri, rujukan tanpa isi perilaku.
+   Satu ayat dapat memuat beberapa obligation (mis. ayat dengan butir a, b, c yang
+   masing-masing kewajiban berbeda). Pisahkan bila aktor, tindakan, atau objeknya
+   berbeda.
+
+3. SPAN (BAGIAN TEKS YANG DIBLOK)
+   Blok bagian teks terpendek yang memuat seluruh unsur obligation: aktor,
+   modalitas, tindakan, dan objek. Jangan sertakan nomor ayat "(1)" di awal.
+   Kutipan diambil otomatis dari teks yang Anda blok (verbatim).
+
+4. FIELD (isi sesuai teks; kosongkan bila tidak disebut di ayat)
+   actor      : siapa yang dibebani (mis. "PJK", "Bank").
+   modality   : obligation | prohibition | permission (wajib dipilih).
+   action     : kata kerja inti (mis. "menyampaikan", "menerapkan").
+   object     : apa yang dikenai tindakan (mis. "laporan transaksi keuangan mencurigakan").
+   condition  : syarat agar obligation berlaku ("dalam hal ...", "apabila ...").
+   threshold  : nilai batas kuantitatif (mis. "Rp100.000.000").
+   timing     : tenggat atau frekuensi (mis. "paling lambat 3 hari kerja").
+   exception  : pengecualian ("kecuali ...", "dikecualikan ...").
+   evidence   : bukti yang menunjukkan kepatuhan (dokumen/catatan/laporan); satu per baris.
+                Tulis bukti yang tersirat langsung dari tindakan (mis. "laporan yang disampaikan"),
+                bukan tebakan prosedur internal.
+   Ayat sumber: tambahkan ID ayat lain bila obligation hanya dapat dipahami bersama ayat lain
+   (mis. definisi di Pasal 1). Ayat yang sedang dianotasi selalu tercatat otomatis.
+
+5. TREATMENT CLASS (wajib dipilih)
+   informational : mendefinisikan istilah/konteks; tidak dieksekusi.
+   interpretive  : memerlukan pertimbangan hukum sebelum dapat dioperasionalkan
+                   (mis. "secara memadai", "sesuai prinsip kehati-hatian").
+   assessable    : dapat dinilai dari bukti yang teridentifikasi, tetapi penilaiannya
+                   memerlukan pertimbangan manusia.
+   executable    : kondisi eksplisit, bukti dapat diamati, hasil pasti (patuh/tidak)
+                   tanpa pertimbangan — mis. tenggat pelaporan dengan tanggal pasti.
+   Bila ragu antara dua kelas, pilih kelas yang MEMBUTUHKAN LEBIH BANYAK pertimbangan
+   manusia (urutan: interpretive > assessable > executable).
+
